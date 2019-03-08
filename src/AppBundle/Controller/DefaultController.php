@@ -23,20 +23,4 @@ class DefaultController extends Controller
             ]
         );
     }
-
-    /**
-     * @Route("/feedback", name="feedback")
-     * @param Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function feedbackAction(Request $request)
-    {
-        return $this->render(
-            '@App/default/feedback.html.twig',
-            [
-                'name' => 'Anatolii',
-            ]
-        );
-    }
 }
