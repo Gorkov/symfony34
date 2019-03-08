@@ -1,0 +1,16 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block body %}
+    <div class="starter-template">
+        <h1>Products page!</h1>
+    </div>
+
+    <ul>
+        {% for key, product in products %}
+            <li>{{ key }} - {{ product }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
