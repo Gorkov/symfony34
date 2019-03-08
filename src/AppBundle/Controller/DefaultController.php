@@ -16,10 +16,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
         return $this->render(
             'default/index.html.twig',
-            ['name' => 'Anatolii','surname'=>'Gorkov']
+            [
+                'name'    => 'Anatolii',
+                'surname' => 'Gorkov',
+            ]
         );
     }
 
