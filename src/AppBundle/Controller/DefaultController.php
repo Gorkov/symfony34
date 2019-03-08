@@ -17,22 +17,26 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         return $this->render(
-            'default/index.html.twig',
+            '@App/default/index.html.twig',
             [
-                'name'    => 'Anatolii',
-                'surname' => 'Gorkov',
+                'name' => 'Anatolii',
             ]
         );
     }
 
     /**
      * @Route("/feedback", name="feedback")
+     * @param Request $request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function feedbackAction()
+    public function feedbackAction(Request $request)
     {
         return $this->render(
-            'default/feedback.html.twig',
-            ['name' => 'Anatolii']
+            '@App/default/feedback.html.twig',
+            [
+                'name' => 'Anatolii',
+            ]
         );
     }
 }
