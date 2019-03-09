@@ -9,7 +9,9 @@
 
     <ul>
         {% for key, product in products %}
-            <li>{{ key }} - {{ product }}</li>
+            <li>
+                <a href="{{ path('productItem', {id: product}) }}">{{ product }}</a>
+            </li>
         {% endfor %}
     </ul>
 

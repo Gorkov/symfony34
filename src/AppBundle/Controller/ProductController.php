@@ -31,4 +31,20 @@ class ProductController extends Controller
         );
     }
 
+    /**
+     * @Route("/products/{id}", name="productItem", requirements={"id": "[0-9]+"})
+     * @param Request $request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showAction(Request $request)
+    {
+        return $this->render(
+            '@App/product/product.html.twig',
+            [
+                'id' => $request->get('id'),
+            ]
+        );
+    }
+
 }
